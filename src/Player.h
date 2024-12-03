@@ -1,13 +1,15 @@
 #pragma once
 
+#include "Agent.h"
+
 #include <string>
+#include <array>
 
 
-struct Player {
+struct Player : public Agent { // represente un joueur
     std::string name{"player1"};
-    char symbol{'X'}; // 'X' ou 'O'
-
-    void display();
 };
 
 Player create_player();
+
+void draw_game_board(const std::array<int, 9> &board, char symbol1, char symbol2);

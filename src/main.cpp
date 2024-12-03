@@ -4,10 +4,20 @@
 using namespace std;
 
 int main(){
-    //Player p = create_player();
-    //p.display();
-    array<char, 9> board;
-    initialize_board(board);
-    draw_game_board(board);
+    Agent p = create_player();
+    //Agent p {Player{"player", 'X'}};
+    Agent ordi{"ordi", 'O'};
+    p.display();
+    ordi.display();
+
+    array<int, 9> board{
+        -1, 0, 0,
+        0, 1, 0,
+        0, 1, 0
+    };
+    //initialize_board(board);
+
+    draw_game_board(board, p.symbol, ordi.symbol);
+
     return 0;
 }

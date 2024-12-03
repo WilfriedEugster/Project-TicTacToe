@@ -25,6 +25,11 @@
         "xtr1common": "cpp",
         "xutility": "cpp",
         "iostream": "cpp",
-        "array": "cpp"
-    }
+        "array": "cpp",
+        "system_error": "cpp",
+        "xlocale": "cpp",
+        "ostream": "cpp"
+    },
+    //"cmake.sourceDirectory": "/genois/wilfried.eugster/Documents/Project-TicTacToe"
+    "cmake.sourceDirectory": "m:/Documents/Project-TicTacToe"
 }

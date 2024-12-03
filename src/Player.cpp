@@ -5,12 +5,20 @@
 using namespace std;
 
 
-Player create_player() {
-    string name{}, symbol_input{};
-    char symbol{};
+Player create_player_base(char symbol = 'X'){ // demande son nom au joueur et renvoie la structure Player associee
+    string name{};
 
     cout << "Saisissez votre nom :" << endl;
     cin >> name;
+
+    return {name, symbol};
+}
+
+Player create_player(){ // demande son nom et son symbole au joueur et renvoie la structure Player associee
+    string symbol_input{};
+    char symbol{};
+
+    Player res{create_player_base()};
 
     bool valid_symbol_input{false};
 
@@ -38,9 +46,7 @@ Player create_player() {
     if (symbol == 'o')
         symbol = 'O';
 
-    return {name, symbol};
-}
+    res.symbol = symbol;
 
-void Player::display(){
-    cout << "(" << name << ", " << symbol << ")" << endl;
+    return res;
 }
