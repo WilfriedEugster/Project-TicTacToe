@@ -15,6 +15,8 @@ int main(){
         tictactoe_2_players();
     else if (mode == 2)
         tictactoe_player_vs_random();
+    else if (mode == 3)
+        tictactoe_player_vs_minmax();
 
     cout << "JEU DU MORPION : FIN" << endl;
 

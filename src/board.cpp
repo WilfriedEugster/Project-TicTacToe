@@ -99,3 +99,12 @@ int winner(const array<int, 9> &board){
     return res;
 }
 
+vector<int> free_indexes(const array<int, 9> &board){
+    vector<int> res{};
+    
+    for(int i{0}; i < board.size(); i++)
+        if (board[i] == 0)
+            res.push_back(i);
+    
+    return res;
+}
