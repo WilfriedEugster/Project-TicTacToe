@@ -28,8 +28,23 @@
         "array": "cpp",
         "system_error": "cpp",
         "xlocale": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "xiosbase": "cpp",
+        "atomic": "cpp",
+        "clocale": "cpp",
+        "cmath": "cpp",
+        "ctime": "cpp",
+        "ios": "cpp",
+        "istream": "cpp",
+        "iterator": "cpp",
+        "memory": "cpp",
+        "stdexcept": "cpp",
+        "streambuf": "cpp",
+        "typeinfo": "cpp",
+        "xfacet": "cpp",
+        "xlocinfo": "cpp",
+        "xlocnum": "cpp",
+        "vector": "cpp"
     },
-    //"cmake.sourceDirectory": "/genois/wilfried.eugster/Documents/Project-TicTacToe"
-    "cmake.sourceDirectory": "m:/Documents/Project-TicTacToe"
+    "cmake.sourceDirectory": "C:/Users/Wilfried Eugster/Documents/IMAC/Algo_prog/Project-TicTacToe"
 }

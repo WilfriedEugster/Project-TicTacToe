@@ -10,5 +10,5 @@ struct Agent { // la structure Agent peut etre un joueur (Player) ou une IA
     char symbol{'X'}; // 'X' ou 'O'
 
     void display();
-    void play(std::array<int, 9> &board);
+    void place_symbol(std::array<int, 9> &board, int n);
 };

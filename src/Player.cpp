@@ -5,12 +5,39 @@
 using namespace std;
 
 
+void Player::play(array<int, 9> &board){
+    int choice{0};
+    bool valid_choice{false};
+
+    while (!valid_choice){
+        cout << name << ", choisissez la case ou mettre un " << symbol << " :" << endl;
+        cin >> choice;
+        if (cin.fail()){
+            cout << "L'entree doit etre un nombre entier !" << endl;
+            std::cin.clear();
+            std::cin.ignore(256,'\n');
+        }
+        else{
+            if (1 <= choice && choice <= board.size()){
+                if (board[choice - 1] == 0)
+                    valid_choice = true;
+                else
+                    cout << "La case doit etre libre !" << endl;
+            }
+            else
+                cout << "L'entier doit etre compris entre 1 et 9 !" << endl;
+        }
+    }
+
+    place_symbol(board, choice - 1);
+}
+
 Player create_player_base(char symbol = 'X'){ // demande son nom au joueur et renvoie la structure Player associee
     string name{};
 
     cout << "Saisissez votre nom :" << endl;
     cin >> name;
-
+    
     return {name, symbol};
 }
 
@@ -18,7 +45,7 @@ Player create_player(){ // demande son nom et son symbole au joueur et renvoie l
     string symbol_input{};
     char symbol{};
 
-    Player res{create_player_base()};
+    Player res = create_player_base();
 
     bool valid_symbol_input{false};
 
