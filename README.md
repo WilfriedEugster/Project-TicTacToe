@@ -27,6 +27,10 @@ Sa méthode play permet de demander au joueur d'entrer le coup qu'il souhaite ef
 La structure IA_random représente une IA qui joue au hasard.
 Sa méthode play place son symbole sur le plateau, au hasard parmi les cases disponibles (on fait une liste des coups possibles puis on en prend un au hasard).
 
+## IA_minmax.cpp, IA_minmax.h
+
+La structure IA_minmax représente une IA qui joue en s'inspirant de l'algorithme min max.
+
 ## tictactoe.cpp, tictactoe.h
 
 tictactoe.cpp contient toutes les fonctions qui permettent de lancer une partie, en combinant différentes fonctions des autres fichiers et en ajoutant des affichages.
