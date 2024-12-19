@@ -9,11 +9,14 @@ using namespace std;
 int main(){
     srand(time(0));
 
-    tictactoe_player_vs_random();
+    int mode{mode_choice()};
 
-    //draw_game_board(board, p.symbol, ordi.symbol);
-    //p.play(board);
-    //draw_game_board(board, p.symbol, ordi.symbol);
+    if (mode == 1)
+        tictactoe_2_players();
+    else if (mode == 2)
+        tictactoe_player_vs_random();
+
+    cout << "JEU DU MORPION : FIN" << endl;
 
     return 0;
 }

@@ -14,10 +14,10 @@ void end_message(int w, const Agent &p1, const Agent &p2){
         cout << "Match nul..." << endl;
 
     if (w == 1)
-        cout << "Victoire de " << p1.name << endl;
+        cout << "Victoire de " << p1.name << " !" << endl;
 
     if (w == -1)
-        cout << "Victoire de " << p2.name << endl;
+        cout << "Victoire de " << p2.name << " !" << endl;
 }
 
 int tictactoe_2_players(){
@@ -106,4 +106,31 @@ int tictactoe_player_vs_random(){
     end_message(w, p, ia);
 
     return w;
+}
+
+int mode_choice(){
+    cout << "JEU DU MORPION : DEMARRAGE" << endl;
+    cout << "1. Deux joueurs" << endl;
+    cout << "2. Un joueur contre l'IA" << endl;
+
+    int choice{0};
+    bool valid_choice{false};
+
+    while (!valid_choice){
+        cout << "Choisissez un mode de jeu (1 ou 2) :" << endl;
+        cin >> choice;
+        if (cin.fail()){
+            cout << "L'entree doit etre un nombre entier !" << endl;
+            std::cin.clear();
+            std::cin.ignore(256,'\n');
+        }
+        else{
+            if (choice == 1 || choice == 2)
+                valid_choice = true;
+            else
+                cout << "L'entier doit etre 1 ou 2 !" << endl;
+        }
+    }
+
+    return choice;
 }
